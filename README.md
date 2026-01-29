@@ -1,5 +1,10 @@
 Semi-Supervised Learning with Deep Generative Models (M1)
 
+NOTE:
+first clone the github repo via the first code block!
+then you can run the implemented code.
+link: https://github.com/TheJezzaS/M1SemiUnsupervisedLearning.git
+
 This project implements the M1 semi-supervised learning model from Kingma et al. using a Variational Autoencoder (VAE) for feature extraction and an SVM classifier for prediction. The model is evaluated on the Fashion-MNIST dataset.
 
 Training is performed in two stages. First, the VAE is trained in an unsupervised manner on the full Fashion-MNIST training set. After training, the encoder mean vector is used as a latent representation for each image and the VAE weights are saved to disk.
@@ -8,6 +13,7 @@ Second, an SVM with an RBF kernel is trained on latent representations extracted
 
 To train and test the model, run:
 
-python main.py
+%cd M1SemiUnsupervisedLearning
+!python EX3_semi_unsupervised_learning.py
 
 The script trains the VAE, trains one SVM per label setting, saves all models, and reports classification accuracy on the Fashion-MNIST test set.
